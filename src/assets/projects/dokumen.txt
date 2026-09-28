@@ -1,0 +1,57 @@
+================================================================
+TEMPLATE DATA PROJECTS — Website Portofolio
+================================================================
+CARA PAKAI:
+1. Isi / ubah kolom di bawah ini (cukup edit teks setelah ":").
+2. Simpan gambar project di folder: src/assets/projects/img/
+   (format disarankan: .png, landscape, mis. 1280x720)
+3. Beri tahu saya (agent) kalau sudah selesai — saya yang
+   memasukkan datanya ke src/Components/Home.jsx.
+
+CATATAN:
+- LINK: isi URL (https://...) jika project punya link live/demo.
+  Kalau diisi -> kartu jadi BISA DIKLIK (tampil tombol
+  "Kunjungi Website"). Kalau dikosongkan -> kartu biasa.
+- TAGS: ditulis kapital, pisahkan dengan " • " (maks 2-3 tag).
+- Jika project LEBIH dari 4, copy blok PROJECT 4 dan lanjutkan
+  nomornya (PROJECT 5, 6, dst).
+
+================================================================
+PROJECT 1 (kartu utama / featured)
+================================================================
+JUDUL     : KelolaGudang — Warehouse Management System
+DESKRIPSI : Sistem manajemen gudang dengan stok real-time, mutasi, stock opname, dan laporan analitik, plus Asisten AI untuk tanya stok, analisis barang, dan penyusunan draft dokumen mutasi.
+TAGS      : WEB APP • WMS • AI ASSISTANT
+GAMBAR    : KelolaGudang.png
+LINK      : https://kelola-gudang-hexa.vercel.app/
+ALT       : KelolaGudang Warehouse Management System
+
+================================================================
+PROJECT 2
+================================================================
+JUDUL     : DeltaJalan — Sistem Pelaporan Kerusakan Jalan
+DESKRIPSI : Sistem pelaporan dan penanganan kerusakan jalan dengan deteksi AI (YOLOv8s) untuk 4 jenis kerusakan, laporan via web dan Telegram, plus peta sebaran dan tracking publik.
+TAGS      : WEB APP • AI DETECTION
+GAMBAR    : DeltaJalan.png
+LINK      : https://delta-jalan.vercel.app/
+ALT       : DeltaJalan Sistem Pelaporan Kerusakan Jalan
+
+================================================================
+PROJECT 3
+================================================================
+JUDUL     : Class Monitoring Application for School Operations
+DESKRIPSI : Aplikasi monitoring kelas untuk attendance, jadwal, tugas, dan progress siswa agar operasional sekolah lebih rapi dan efisien.
+TAGS      : EDTECH • OPERATIONS
+GAMBAR    : MonitoringKelas.png
+LINK      : (kosong)
+ALT       : Class Monitoring Application for School Operations
+
+================================================================
+PROJECT 4 (slot kosong — isi jika tambah project baru)
+================================================================
+JUDUL     :
+DESKRIPSI :
+TAGS      :
+GAMBAR    :
+LINK      :
+ALT       :
