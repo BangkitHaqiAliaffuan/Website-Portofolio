@@ -3,8 +3,8 @@ import emailjs from '@emailjs/browser'
 import SpaceScroll from './SpaceScroll'
 import './Home.css'
 import PhotoProfile from '../assets/photo-profile.png'
-import CryptoTrackingImage from '../assets/projects/img/CryptoTracking.png'
-import TrashcareImage from '../assets/projects/img/Trashcare.png'
+import KelolaGudangImage from '../assets/projects/img/KelolaGudang.png'
+import DeltaJalanImage from '../assets/projects/img/DeltaJalan.png'
 import MonitoringKelasImage from '../assets/projects/img/MonitoringKelas.png'
 import {
   FaCode,
@@ -434,31 +434,39 @@ const Home = () => {
           <a
             className='project-card project-card--featured project-card--link reveal reveal-up'
             style={{ '--reveal-delay': '160ms' }}
-            href='https://cryptotracking-mu.vercel.app/'
+            href='https://kelola-gudang-hexa.vercel.app/'
             target='_blank'
             rel='noreferrer noopener'
-            aria-label='Open Crypto Price Tracking Website'
+            aria-label='Open KelolaGudang Website'
           >
             <div className='project-media'>
-              <img src={CryptoTrackingImage} alt='Crypto Price Tracking Website' />
+              <img src={KelolaGudangImage} alt='KelolaGudang Warehouse Management System' />
               <span className='project-hover-cta' aria-hidden='true'>Kunjungi Website ↗</span>
               <div className='project-overlay'>
-                <h3>Crypto Price Tracking Website</h3>
-                <p>Website pelacakan harga cryptocurrency real-time dengan pencarian coin, watchlist, dan detail aset yang dipersonalisasi.</p>
-                <small>WEB APP • REAL-TIME DATA</small>
+                <h3>KelolaGudang — Warehouse Management System</h3>
+                <p>Sistem manajemen gudang dengan stok real-time, mutasi, stock opname, dan laporan analitik, plus Asisten AI untuk tanya stok, analisis barang, dan penyusunan draft dokumen mutasi.</p>
+                <small>WEB APP • WMS • AI ASSISTANT</small>
               </div>
             </div>
           </a>
-          <article className='project-card reveal reveal-up' style={{ '--reveal-delay': '240ms' }}>
+          <a
+            className='project-card project-card--link reveal reveal-up'
+            style={{ '--reveal-delay': '240ms' }}
+            href='https://delta-jalan.vercel.app/'
+            target='_blank'
+            rel='noreferrer noopener'
+            aria-label='Open DeltaJalan Website'
+          >
             <div className='project-media'>
-              <img src={TrashcareImage} alt='TrashCare: Smart Waste Pickup & Reuse Marketplace' />
+              <img src={DeltaJalanImage} alt='DeltaJalan Sistem Pelaporan Kerusakan Jalan' />
+              <span className='project-hover-cta' aria-hidden='true'>Kunjungi Website ↗</span>
               <div className='project-overlay'>
-                <h3>TrashCare: Smart Waste Pickup & Reuse Marketplace</h3>
-                <p>Aplikasi mobile untuk pickup sampah gratis dan marketplace barang bekas guna mendorong circular use di komunitas.</p>
-                <small>MOBILE APP • SUSTAINABILITY</small>
+                <h3>DeltaJalan — Sistem Pelaporan Kerusakan Jalan</h3>
+                <p>Sistem pelaporan dan penanganan kerusakan jalan dengan deteksi AI (YOLOv8s) untuk 4 jenis kerusakan, laporan via web dan Telegram, plus peta sebaran dan tracking publik.</p>
+                <small>WEB APP • AI DETECTION</small>
               </div>
             </div>
-          </article>
+          </a>
           <article className='project-card reveal reveal-up' style={{ '--reveal-delay': '320ms' }}>
             <div className='project-media'>
               <img src={MonitoringKelasImage} alt='Class Monitoring Application for School Operations' />

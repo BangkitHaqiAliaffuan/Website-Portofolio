@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import spaceshipImg from '../assets/spaceship-window-processed.png';
 import earthImg from '../assets/earth.png';
-import Profile3D from './Profile3D';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +12,6 @@ const SpaceScroll = () => {
   const earthRef = useRef(null);
   const lensFlareRef = useRef(null);
 
-  const profileRef = useRef(null);
   const profileTextRef = useRef(null);
 
   useEffect(() => {
@@ -59,19 +57,12 @@ const SpaceScroll = () => {
         6
       );
 
-      /* ── Profile photo + text muncul bersamaan dengan Earth zoom-out ── */
-      tl.fromTo(
-        profileRef.current,
-        { opacity: 0, scale: 0.6 },
-        { opacity: 1, scale: 1, ease: 'back.out(1.4)', duration: 2 },
-        7
-      );
-
+      /* ── Profile text muncul bersamaan dengan Earth zoom-out ── */
       tl.fromTo(
         profileTextRef.current,
         { opacity: 0, y: 18 },
         { opacity: 1, y: 0, ease: 'power2.out', duration: 1.5 },
-        7.5
+        7
       );
 
       /* ── Phase 3  (80% – 100%)  Parallax + lens flare ──────────────── */
@@ -154,7 +145,7 @@ const SpaceScroll = () => {
 
         /* ── Lens flare (di dalam bumi) ── */
 
-        /* ── Profile photo ── */
+        /* ── Name text ── */
         .profile-wrapper {
           position: absolute;
           top: 50%;
@@ -163,30 +154,8 @@ const SpaceScroll = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 1rem;
           z-index: 4;
           pointer-events: none;
-        }
-
-        /*
-         * ✏️  ATUR UKURAN FOTO DI SINI:
-         * Ubah width & height sesuai keinginan kamu.
-         * Contoh: width: 180px → lebih kecil  |  width: 320px → lebih besar
-         */
-        .profile-photo {
-          position: relative;
-          width: 360px;          /* ← UBAH LEBAR FOTO DI SINI */
-          height: 360px;         /* ← UBAH TINGGI FOTO DI SINI */
-          overflow: hidden;
-          border-radius: 50%;
-          border: 3px solid rgba(255, 255, 255, 0.6);
-          box-shadow: 0 0 32px rgba(120, 200, 255, 0.5), 0 0 8px rgba(255,255,255,0.3);
-          will-change: transform, opacity;
-        }
-
-        .profile-photo > * {
-          width: 100%;
-          height: 100%;
         }
 
         /*
@@ -245,15 +214,8 @@ const SpaceScroll = () => {
         {/* ── Lens flare di atas Earth ── */}
         <div ref={lensFlareRef} className="lens-flare" style={{ zIndex: 3 }} />
 
-        {/* ── Profile photo + teks di tengah bumi ── */}
+        {/* ── Nama di tengah bumi ── */}
         <div className="profile-wrapper">
-          <div
-            ref={profileRef}
-            className="profile-photo"
-            style={{ opacity: 0, width: "360px", height: "360px" }}
-          >
-            <Profile3D />
-          </div>
           {/*
            * ✏️  TEKS DI SINI — ganti isi <p> sesuai keinginan kamu.
            * Contoh: nama, profesi, tagline, dll.
